@@ -1,10 +1,10 @@
-<h1>Demo Chat</h1>
+<h1>Chat</h1>
 
 <div id="messages">
   <%= render @messages %>
 </div>
 
-<h2>New message</h2>
+<h2>mensaje:</h2>
 
 <%= form_with url: '#', html: {id: 'new-message'} do |f| %>
   <%= f.label :body %>
@@ -13,9 +13,9 @@
   <div class="form-group">
     <%= f.file_field :attachment, id: 'message-attachment' %>
     <br>
-    <small>Only PNG, JPG and GIf images are allowed</small>
+    <small>Solo PNG, JPG y GIf</small>
   </div>
 
   <br>
-  <%= f.submit %>
+  <%= f.submit 'enviar'%>
 <% end %>
